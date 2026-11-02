@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JUPAS 收生分數 HTML 生成器</title>
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="banner">
+      <img id="logo" alt="01 教育">
+      <div>
+        <h1>JUPAS 收生分數 HTML 生成器</h1>
+        <p>上傳院校的 JUPAS 收生分數 PDF，在這部電腦產生一份可獨立開啟的響應式 HTML。</p>
+      </div>
+    </header>
+    <label class="drop" id="drop">
+      <input id="file" type="file" accept="application/pdf,.pdf">
+      <span class="drop-title">選擇或拖放 PDF</span>
+      <span class="drop-hint">支援港大、中大、科大、理大、城大、嶺南、教大。檔案只在瀏覽器內處理。</span>
+    </label>
+    <p id="status" class="status" role="status"></p>
+    <div id="actions" class="actions" hidden>
+      <button id="download" type="button">下載 HTML</button>
+      <button id="reset" type="button" class="ghost">清除</button>
+    </div>
+    <iframe id="preview" title="表格預覽" hidden></iframe>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
